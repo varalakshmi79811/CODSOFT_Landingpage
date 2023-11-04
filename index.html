@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+	<title>Music Website HTML & CSS</title>
+    
+	
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Kanit:wght@600&display=swap');
+
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@600&display=swap');
+        *
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+h3{
+    color: rgb(235, 14, 14);
+	font-size: 4rem;
+	letter-spacing: 2px;
+  font-family: 'Kanit', sans-serif;
+  text-transform: uppercase;
+}
+body 
+{
+  background-color: black;
+}
+
+.container
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+  height: 75%;
+}
+
+ul 
+{
+	display: flex;
+	flex-direction: row;
+	list-style: none;
+	gap: 35%;
+}
+
+li a 
+{
+	text-decoration: none;
+	color: white;
+	font-size: 1.3rem;
+	font-family: cursive;
+	transition: 0.7s ease;
+	font-family: 'Gabarito', cursive;
+font-family: 'Kanit', sans-serif;
+}
+
+li a:hover 
+{
+	background-color: white;
+	color: black;
+}
+
+span 
+{
+	color: red;
+	font-size: 3.5rem;
+	font-family: fantasy;
+}
+
+
+.body-section
+{
+  margin: 5%;
+  display: flex;
+  flex-direction: row;
+  gap: 35%;
+}
+section{
+    padding: 50px;
+}
+h2
+{
+	color: rgb(235, 14, 14);
+	font-size: 6rem;
+	letter-spacing: 2px;
+  font-family: 'Kanit', sans-serif;
+  text-transform: uppercase;
+}
+ 
+ p
+ {
+ 	color: whitesmoke;
+ 	font-size: 3rem;
+ 	font-family: 'Gabarito', cursive;
+font-family: 'Alegreya';
+ }
+
+h1
+{
+	font-size: 2rem;
+	font-family: fantasy;
+	padding: 25px;
+	color: white;
+}
+
+audio 
+{
+	margin-top: 5%;
+}
+
+.footer
+{
+	width: 100%;
+	height: 100%;
+	padding: 80px;
+}
+
+h4 
+{
+  text-align: center;
+  color: white;
+  font-family: 'Gabarito', cursive;
+font-family: 'Kanit', sans-serif;
+letter-spacing: 1px;
+font-size: 1rem;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: lightgrey;
+}
+
+h4 
+{
+	color: white;
+	padding-top: 5%;
+}
+
+
+.footer-img 
+{
+	text-align: center;
+	padding-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+/* Update the styling for the new sections */
+
+#toplist, #product, #contact {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#toplist h2, #product h2, #contact h2 {
+    color: red;
+    font-size: 4rem;
+    letter-spacing: 2px;
+    font-family: 'playfair display';
+    text-transform: uppercase;
+}
+
+#toplist p, #product p, #contact p {
+    color: whitesmoke;
+    font-size: 2rem;
+    font-family: 'Gabarito', cursive;
+    font-family: 'Alegreya';
+}
+
+address {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    color: whitesmoke;
+    font-family: 'Gabarito' ;
+    font-family: 'Alegreya';
+}
+
+/* Update the styling for the nav links to include new sections */
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 35%;
+}
+
+/* Add these styles for the nav links */
+li:nth-child(5) a { /* TopList */
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-family: cursive;
+    transition: 0.7s ease;
+    font-family: 'Gabarito', cursive;
+    font-family: 'Kanit', sans-serif;
+}
+
+li:nth-child(6) a { /* Product */
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-family: cursive;
+    transition: 0.7s ease;
+    font-family: 'Gabarito', cursive;
+    font-family: 'Kanit', sans-serif;
+}
+
+li:nth-child(7) a { /* Contact */
+    text-decoration: none;
+    color: white;
+    font-size: 1.3rem;
+    font-family: cursive;
+    transition: 0.7s ease;
+    font-family: 'Gabarito', cursive;
+    font-family: 'Kanit', sans-serif;
+}
+
+a{
+            color: rgb(232, 197, 0);
+            text-decoration: none;
+        }
+        img{
+            border-top-right-radius: 5px;
+            border-top-left-radius: 5px;
+        }
+        .row{
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        span.card-title{
+           font-size: 24px;
+        }
+
+#toplist .card{
+    width: 2px;
+    padding: 10px;
+   
+}
+.card-img{
+    width:100px;
+}
+.col-2{
+    height: 250px;
+    padding: 20px; /* Add padding for spacing between the cards */
+    
+}
+
+
+/* Add this to your existing CSS file */
+/* Add this to your existing CSS file */
+.hero {
+    background: url('bgp.jpeg') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    padding: 100px 0;
+    height: 100vh; /* Set the hero section to full viewport height */
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #000;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-right: 150px; /* Push the search bar to the right */
+}
+
+#search {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #f00;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #000;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px;
+    background-color: rgb(38, 36, 36);
+    text-align: center;
+   
+}
+
+.product-card {
+    background-color: black;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    
+
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: 'playfair display';
+}
+
+.product-card p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.product-card a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f00;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+   
+}
+
+.product-card a.btn:hover {
+    background-color: #000;
+}
+
+footer {
+    text-align: center;
+    background-color: black;
+    color: red;
+    padding: 10px;
+}
+
+.footer-img 
+{
+	text-align: center;
+	padding-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+
+    </style>
+</head>
+<body>
+    <!-- Add these sections within the <body> tag after the existing content -->
+
+
+
+<div class="container">
+	<div class="header">
+	<h1><span>M</span>usic</h1>
+    </div>
+    <div class="search-bar">
+        <input type="text" id="search" placeholder="Search...">
+        <button type="submit">Search</button>
+    </div>
+    <nav>
+    	<ul>
+    		
+    		<li><a href="#home">Home</a></li>
+    		<li><a href="#toplist">TopList</a></li>
+    		<li><a href="#product">Product</a></li>
+    		<li><a href="#contact">Contact</a></li>
+
+    	</ul>
+    </nav>
+  </div>
+  <section id="home" class="hero">
+    <div class="hero-content">
+        <h1>Welcome to Our <span>M</span>usic App</h1>
+        <p>Discover, Listen, and Enjoy the Latest Music</p>
+        <a href="#toplist" class="btn">Explore Top Hits</a>
+    </div>
+</section>
+
+
+    <section id="toplist">
+        <h2>Top List</h2><br><br><br>
+        <p>Click and discover the latest top hits and trending tracks.</p><br><br><br><br>
+        <hr style="border: 1px solid black;">
+        
+        <div class="container">
+            <div class="row m-4">
+                <section id="song1">
+                   
+                        <a href="https://varalakshmi79811.github.io/landing1/"><img src="./cheleya.jpeg" class="card-img"> </a>
+                        <div class="card-img-overlay"><br><br><br><br>
+                            <span class="card-title text-white ">CHALEYA</span>
+                        </div>
+                    
+                        
+                </section>
+                
+                <section id="song2">
+                  
+                        <a href="https://varalakshmi79811.github.io/landing2/"><img src="./hukum.jpeg" class="card-img"> </a>
+                        <div class="card-img-overlay"><br><br><br><br>
+                            <span class="card-title text-white ">HUKUM</span>
+                        </div>
+                    
+                        
+                </section>
+                <section id="song3">
+                   
+                        <a href="https://varalakshmi79811.github.io/landing3/"><img src="./oridevuda.jpeg" class="card-img"> </a>
+                        <div class="card-img-overlay"><br><br><br><br>
+                            <span class="card-title text-white ">ORI DEVUDA</span>
+                        </div>
+                    
+                        
+                </section>
+                <section id="song4">
+                    
+                        <a href="https://varalakshmi79811.github.io/landing4/"><img src="./kollagottey.jpeg" class="card-img"> </a>
+                        <div class="card-img-overlay"><br><br><br><br>
+                            <span class="card-title text-white ">KOLLAGOTTEY</span>
+                        </div>
+                    
+                        
+                </section>
+                <div class="col-2">
+                    <div class="card" style="width: 190px; height: 550px;">
+                        <a href="#song1"></a>
+                        
+                 
+                </div>
+                <div class="col-2">
+                    <div class="card" style="width: 190px; height: 550px; ">
+                        <a href="#song2"></a>
+                        
+                   
+                </div>
+                <div class="col-2">
+                    <div class="card" style="width: 190px; height: 550px;">
+                        <a href="#song3"></a>
+                        
+                   
+                </div>
+                <div class="col-2">
+                    <div class="card" style="width: 190px; height: 550px; ">
+                        <a href="#song4"></a>
+                        
+                   
+                </div>
+                
+               
+                
+            </div>
+        </div>
+    </section>
+    
+    <section id="product">
+        <h2>Our Products</h2><br><br>
+      
+        <div class="product-container">
+            <div class="product-card">
+                <img src="stream.jpeg" alt="Product 1">
+                <h3>Music Streaming Service</h3>
+                <p>Stream unlimited music from our vast library. Enjoy offline listening and create playlists.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="product-card">
+                <img src="ani.jpeg" alt="Product 2">
+                <h3>Exclusive Artists</h3>
+                <p>Discover exclusive tracks and live performances from your favorite artists.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+            <div class="product-card">
+                <img src="pod.jpeg" alt="Product 3">
+                <h3>Podcast Library</h3>
+                <p>Explore a wide range of podcasts on various topics, from music to technology.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2 style="font-size: 22;">Contact Us</h2><br><br><br><br><br>
+        <p>If you have any questions or feedback, feel free to reach out to us.</p><br><br><br>
+        <address>
+            Email: <a href="mailto:varalakshmi6324@gmail.com">varalakshmi6324@gmail.com</a><br><br>
+            Phone: <a href="tel:+1234567890">+1 (234) 567-890</a>
+        </address>
+    </section>
+    <footer>
+       
+        <div class="footer-img">
+            <img src="spotify1.jpeg" width="80" height="80">
+            <img src="apple1.jpeg" width="50" height="50">
+            <img src="wynk.jpeg" width="50" height="50">
+            <img src="jio1.jpeg" width="70" height="50">
+        </div><br><br>
+      
+            <caption>@2023 landing page</caption>
+     
+        
+    </footer>
+
+</body>
+</html>
